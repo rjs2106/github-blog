@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakpoints } from '../../styles/breakpoints'
 
 // Styles
 export const HeaderContainer = styled.header`
@@ -10,6 +11,10 @@ export const HeaderContainer = styled.header`
     rgba(50, 148, 248, 0.15) 10%,
     ${(props) => props.theme['blue-800']} 90%
   );
+
+  @media ${breakpoints.medium} {
+    grid-template-columns: auto;
+  }
 `
 
 export const LeftContent = styled.div`
@@ -22,6 +27,10 @@ export const LeftContent = styled.div`
   -moz-background-size: 25rem;
   -o-background-size: 25rem;
   background-size: 25rem;
+
+  @media ${breakpoints.medium} {
+    display: none;
+  }
 `
 
 export const MiddleContent = styled.div`
@@ -42,4 +51,8 @@ export const RightContent = styled.div`
   -moz-background-size: 22rem;
   -o-background-size: 22rem;
   background-size: 22rem;
+
+  @media ${breakpoints.medium} {
+    display: none;
+  }
 `
