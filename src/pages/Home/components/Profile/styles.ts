@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakpoints } from '../../../../styles/breakpoints'
 
 export const ProfileContainer = styled.section`
   position: relative;
@@ -9,6 +10,12 @@ export const ProfileContainer = styled.section`
   border-radius: 0.75rem;
   margin-top: -7rem;
   box-shadow: 0px 2px 28px rgba(0, 0, 0, 0.3);
+
+  @media ${breakpoints.medium} {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
 `
 export const Photo = styled.div`
   width: 10rem;
@@ -31,9 +38,18 @@ export const Header = styled.div`
   display: flex;
   justify-content: space-between;
 
+  @media ${breakpoints.medium} {
+    flex-direction: column;
+    align-items: center;
+  }
+
   h1 {
     font-size: 1.5rem;
     color: ${(props) => props.theme.snow};
+
+    @media ${breakpoints.medium} {
+      margin-bottom: 0.5rem;
+    }
   }
 
   button {
@@ -67,6 +83,12 @@ export const Social = styled.div`
   margin-top: auto;
   display: flex;
   gap: 1.5rem;
+
+  @media ${breakpoints.medium} {
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+  }
 
   div {
     display: flex;
